@@ -1,0 +1,103 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100vh;
+  background-image: url("https://images6.alphacoders.com/617/617693.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.weatherCard {
+  width: 50%;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.28);
+  margin: 10px auto 0;
+  border-radius: 20px;
+  padding: 40px 40px;
+  text-align: center;
+}
+
+.search input {
+  width: 40%;
+  border: 0;
+  outline: 0;
+  background: rgba(255, 255, 255, 0.39);
+  padding: 5px 15px;
+  height: 30px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.weather {
+  display: none;
+}
+
+.weather h1 {
+  font-size: 45px;
+  margin: 5px 0px;
+}
+
+.weather h2 {
+  font-size: 40px;
+  margin: 20px 0px;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 3px;
+  align-items: center;
+  margin: 0px 0px;
+  font-size: 18px;
+}
+
+.details .pair p {
+  font-size: 18px;
+}
+
+.error {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .weather h1 {
+    font-size: 40px;
+  }
+  .weather h2 {
+    font-size: 35px;
+  }
+}
+
+@media (max-width: 640px) {
+  .details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .weather h1 {
+    font-size: 35px;
+  }
+  .weather h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .details {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .weather h1 {
+    font-size: 30px;
+  }
+  .weather h2 {
+    font-size: 25px;
+  }
+}
