@@ -1,5 +1,5 @@
-import { apiKey } from "./config.js";
 
+const apiKey = "54c1d1aac6b6c4d1b8ebaddf399f74c4"
 const apiUrl =
   "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
@@ -59,13 +59,11 @@ async function cityWeather(city) {
     document.querySelector(".feelsLike").innerHTML =
       "Feels like: " + Math.round(data.main.feels_like) + "°C";
 
-    console.log(data);
+    
     const iconCode = data.weather[0].icon;
     weatherIcon.src = `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
-    setTimeout(
-      () => console.log("Current Weather Icon SRC:", weatherIcon.src),
-      2000
-    );
+   
+  
     // Show weather + hide error if data=valid
     document.querySelector(".weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
